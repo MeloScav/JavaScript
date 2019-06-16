@@ -38,5 +38,16 @@
         },
     ];
 
-    // your code here
+
+      let bouton = document.getElementById("run");
+      bouton.addEventListener("click", ()=>{
+
+            people.forEach(element =>{      // element devient chaque partie du tableau
+                console.log(element.lastname);      // pour recupérer que les lastnames
+            });
+
+      });
+
+
+
 })();

@@ -10,6 +10,19 @@
 // You will have time to focus on it later.
 
 (() => {
+    let bouton = document.getElementById("run");
+    bouton.addEventListener("click", ()=>{
+
+        let supD = fruits.shift();
+        let supF = fruits.pop();
+
+        let ajoutD = fruits.unshift("banane");
+        let ajoutF = fruits.push("kiwi");
+
+        console.log(fruits);
+
+    });
+
     const fruits = [
         "pomme",
         "poire",

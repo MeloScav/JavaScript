@@ -23,5 +23,15 @@
         "cerise",
     ]);
 
-    // your code here
+    document.getElementById("run").addEventListener("click", ()=>{
+        fruits.delete("pomme");       // Supprime
+        fruits.delete("cerise");
+        fruits.add("banane");         // Ajoute
+        fruits.add("kiwi");
+        console.log(fruits);
+
+
+    });
+
+
 })();

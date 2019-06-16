@@ -27,5 +27,24 @@
         "cerise",
     ];
 
-    // your code here
+
+    document.getElementById("run").addEventListener("click", ()=>{
+
+          let tableauSansDoublon = fruits.reduce(
+              (accu, valMtn) =>{
+                  if(accu.indexOf(valMtn) === -1){
+                        accu.push(valMtn);
+                  }
+                  return accu;
+        }, []
+
+        );
+        console.log(tableauSansDoublon);
+
+
+
+
+    });
+
+
 })();

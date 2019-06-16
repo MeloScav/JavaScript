@@ -88,5 +88,20 @@
         },
     ];
 
-    // your code here
+    let bouton = document.getElementById("run");
+    bouton.addEventListener("click", ()=>{
+    let newTab = [];
+
+      people.forEach(element =>{
+          if(element.age > 18){
+              newTab.push(element);
+          }
+
+      });
+        console.log(newTab);
+
+    });
+
+
+
 })();

@@ -25,5 +25,16 @@
         "cerise",
     ];
 
-    // your code here
+    let bouton = document.getElementById("run");
+    bouton.addEventListener("click", ()=>{
+
+            fruits.forEach(fruit =>{
+                console.log(fruit);
+            });
+
+    });
+
+
+
+
 })();

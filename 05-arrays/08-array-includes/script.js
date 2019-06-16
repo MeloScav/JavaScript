@@ -25,5 +25,18 @@
         "cerise",
     ];
 
-    // your code here
+
+    document.getElementById("run").addEventListener("click", ()=>{
+
+      if(fruits.indexOf("pomme") > -1){
+          console.log("Oui! Il y a une pomme !");
+      }
+      else{
+        console.log("Non! Pas de pomme :(")
+      }
+
+
+    });
+
+
 })();
