@@ -10,5 +10,24 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+    document.getElementById("run").addEventListener("click", ()=>{
+        let presentation = {
+            lastname : "Scavezzoni",      // propriété
+            firstname : "Méloé",
+            age : 24,
+            city: "Trooz",
+            country : "Belgique",
+
+            identite : function(){                                     // méthode
+                return "Nom de famille : " + this.lastname +
+                       "\nPrénom : " + this.firstname +
+                       "\nÂge : " + this.age +
+                       "\nVille : " + this.city +
+                       "\nPays : " + this.country;
+            }
+        }
+        console.log(presentation.identite());
+    });
+
+
 })();
