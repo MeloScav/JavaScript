@@ -10,5 +10,26 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+    // Récupération des boutons
+      let bouton1 = document.getElementById("fix-part-one");
+      let bouton2 = document.getElementById("fix-part-two");
+      let bouton3 = document.getElementById("fix-part-three");
+      let bouton4 = document.getElementById("fix-part-four");
+    // Récupération des inputs
+      let input1 = document.getElementById("part-one");
+      let input2 = document.getElementById("part-two");
+      let input3 = document.getElementById("part-three");
+      let input4 = document.getElementById("part-four");
+
+      const defilement = (input)=>{
+          let valeur = parseInt(input.value);
+          valeur += 1;
+          if(valeur > input.dataset.max){
+              valeur = input.datasetmin;
+           }
+          input.textContent = valeur;          
+      };
+
+
+
 })();

@@ -15,5 +15,27 @@
             return `${this.constructor.greeting}! I'm ${this.name}!`;
         }
     }
-    // your code here
+
+    class Chien extends Animal {
+        constructor (name){
+            super();                                  // Pour "appeler" le parent
+            this.name = name;
+            this.constructor.greeting = "Wouf";     // Ajouter "constructor" pour le rendre statique
+        }
+    }
+
+    class Chat extends Animal{
+        constructor (name){
+            super();
+            this.name = name;
+            this.constructor.greeting = "Miaou";
+        }
+    }
+
+    document.getElementById("run").addEventListener("click", ()=>{
+         let chienW = new Chien ("Watson");         // On crée un nouveau chien
+         let chatB = new Chat ("Bubulle");
+         console.log(chienW.sayHello());        // utiliser le nom de la variable ! 
+         console.log(chatB.sayHello())
+    });
 })();

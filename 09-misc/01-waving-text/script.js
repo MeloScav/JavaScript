@@ -10,5 +10,7 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+    let texte = document.getElementById("target").innerText;    // On récupère le texte
+    console.log(texte);
+
 })();

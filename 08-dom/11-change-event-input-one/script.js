@@ -10,5 +10,10 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+    let inputPass = document.getElementById("pass-one");    // On récupère l'inputPass
+    let compteur = document.getElementById("counter");      // On récupère le compteur
+    inputPass.setAttribute("maxlength", "10");              // nombre max = 10
+    inputPass.addEventListener("input", ()=>{                       // lorsqu'on ajoute ou supprime du texte
+        compteur.textContent = (inputPass.value.length) + "/10";    // Le compter augmente ou diminue
+    });
 })();

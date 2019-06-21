@@ -10,5 +10,9 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+    let p = document.querySelectorAll(".target");       // Rassemble dans un tableau
+    p.forEach(element =>{                               // Changer chaque élément du tableau
+        element.textContent = "owned";
+    });
+
 })();

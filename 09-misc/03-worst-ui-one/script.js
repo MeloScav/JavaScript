@@ -10,5 +10,10 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+    let numero = document.getElementById("target");
+    let bouton = document.getElementById("slider");
+    bouton.addEventListener("input", ()=>{           // Tout le long
+          numero.textContent = "+ " + bouton.value;          // Numéro = valeur bouton
+    });
+
 })();

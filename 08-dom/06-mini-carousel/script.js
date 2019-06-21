@@ -17,6 +17,13 @@
         "../../_shared/img/lemon.svg",
         "../../_shared/img/map.svg",
     ];
-
-    // your code here
+    let index = 0;        // On crée une variable index pour changer l'image
+    document.getElementById("next").addEventListener("click", ()=>{
+        let image = document.querySelector("img");      // On sélectionne l'image
+        image.src = gallery[index];   // On remplace le src par l'élément du tableau suivant le numéro d'index
+        index+=1;                         // On ajoute 1 à chaque fois
+        if(index >= gallery.length){      // Lorsqu'on dépasse la longueur du tableau, on redémarre à zéro
+            index = 0;
+        }
+    });
 })();

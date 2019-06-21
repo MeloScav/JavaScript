@@ -40,7 +40,7 @@
 
     document.getElementById("run").addEventListener("click", ()=>{
         let birdsAleat = birds[Math.floor(Math.random()*birds.length)];
-        let adjAleat = [...adjectives][Math.floor(Math.random()*birds.length)];
+        let adjAleat = [...adjectives][Math.floor(Math.random()*adjectives.size)];
         if(birdsAleat.fem == true){
             document.getElementById("target").textContent = "La " + birdsAleat.name + " " + adjAleat +"e";
         }

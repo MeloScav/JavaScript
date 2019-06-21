@@ -18,15 +18,23 @@
             city: "Trooz",
             country : "Belgique",
 
-            identite : function(){                                     // méthode
+            /*identite : function(){                                     // méthode
                 return "Nom de famille : " + this.lastname +
                        "\nPrénom : " + this.firstname +
                        "\nÂge : " + this.age +
                        "\nVille : " + this.city +
                        "\nPays : " + this.country;
-            }
+            }*/
         }
-        console.log(presentation.identite());
+        function identite(obj){                                     // méthode
+            return "Nom de famille : " + obj.lastname +
+                   "\nPrénom : " + obj.firstname +
+                   "\nÂge : " + obj.age +
+                   "\nVille : " + obj.city +
+                   "\nPays : " + obj.country;
+        }
+
+        console.log(identite(presentation));
     });
 
 

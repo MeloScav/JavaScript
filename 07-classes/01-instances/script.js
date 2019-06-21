@@ -16,5 +16,12 @@
             this.age = age;
         }
     }
-    // your code here
+    document.getElementById("run").addEventListener("click", ()=>{
+          let catSkitty = new Cat("Skitty", 9);     // On crée un nouveau chat
+          let catPixel = new Cat ("Pixel", 6);
+          /*console.log(catSkitty);
+          console.log(catPixel);*/
+          console.log("Nouveau chat : " + catSkitty.name + " âgé de " + catSkitty.age + " ans" +
+                      "\nNouveau chat : " + catPixel.name + " âgé de " + catPixel.age + " ans");
+    });
 })();

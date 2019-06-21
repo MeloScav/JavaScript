@@ -10,5 +10,18 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+    let inputPass = document.getElementById("pass-one");    // On récupère le mot de passe
+    let validite = document.getElementById("validity");     // On récupère le texte qui valide
+  // let nbr = /.*[0-9].*[0-9].*/;
+    let nbr = /.*\d.*\d.*/;            // 2 nombres de 0 à 9 n'importe où
+
+    inputPass.addEventListener("input", ()=>{                      // lorsqu'on ajoute ou supprime du texte
+        let resultNbrs = nbr.test(inputPass.value);
+        if(inputPass.value.length >= 8 && resultNbrs == true){      // si 8 caractères avec au moins 2 chiffres
+            validite.textContent = "ok";
+        }
+        else{
+            validite.textContent = "Pas ok";
+        }
+    });
 })();

@@ -10,5 +10,27 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+  class Person{
+      constructor(firstname, lastname){
+          this.firstname = firstname;     // propriétés
+          this.lastname = lastname;
+      }
+      get name(){                                       // Récupère une valeur
+        return this.firstname + " "+ this.lastname;
+      }
+      set name(chaine){                                 // Met une nouvelle valeur
+        let res = chaine.split(" ");            // Tableau
+        this.firstname = res[0];                // Met le firstname au début
+        this.lastname = res[1];                 // Met le lastname à la fin
+      }
+  }
+
+
+  document.getElementById("run").addEventListener("click", ()=>{
+        let personL = new Person("Lulu", "LeFou");      // On crée une nouvelle personne
+        console.log(personL.name);
+        personL.name="Gizmo Scav";        // On remplace
+        console.log(personL.name);
+
+  });
 })();

@@ -26,5 +26,22 @@
         os: "linux",
         user: null,
     };
-    // your code here
+
+    document.getElementById("run").addEventListener("click", ()=>{
+
+      computers.forEach(element =>{      // element devient chaque partie du tableau
+          if(element.available == null){                        // Si absent
+              element.available = defaultProps.available;
+          }
+          if(element.user == null){
+              element.user = defaultProps.user;
+          }
+          if(element.os == null){
+              element.os = defaultProps.os;
+          }
+      });
+        console.log(computers);
+
+    });
+
 })();
