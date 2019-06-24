@@ -41,49 +41,4 @@
         boutonNum(bouton4);
     });
 
-
-    /*bouton1.addEventListener("click", ()=>{
-        let valeur1 = parseInt(bouton1.innerText);      // On récupère la valeur du bouton et on le transforme en nombre
-        valeur1 += 1;                               // On ajoute +1 au clic
-        if(valeur1 > bouton1.dataset.max){          // Si la valeur est plus grande que la valeur max
-              valeur1 = bouton1.dataset.min;        // On retourne à la valeur de départ
-        }
-        bouton1.textContent = valeur1;      // on met la valeur1 dans le bouton1
-        numero.textContent = bouton1.innerText + bouton2.innerText + bouton3.innerText + bouton4.innerText;    // On insère les modifications des boutons dans le numéro
-    });
-    bouton2.addEventListener("click", ()=>{
-        let valeur2 = parseInt(bouton2.innerText);
-        valeur2 += 1;
-        if(valeur2 > bouton2.dataset.max){
-              valeur2 = bouton2.dataset.min;
-        }
-        else if (valeur2 < 10) {
-            valeur2 = "0" + valeur2;
-        }
-        bouton2.textContent = valeur2;
-        numero.textContent = bouton1.innerText + bouton2.innerText + bouton3.innerText + bouton4.innerText;
-    });
-    bouton3.addEventListener("click", ()=>{
-        let valeur3 = parseInt(bouton3.innerText);
-        valeur3 += 1;
-        if(valeur3 > bouton3.dataset.max){
-              valeur3 = bouton3.dataset.min;
-        }
-        else if (valeur3 < 10) {
-            valeur3 = "0" + valeur3;
-        }
-        bouton3.textContent = valeur3;
-        numero.textContent = bouton1.innerText + bouton2.innerText + bouton3.innerText + bouton4.innerText;
-    });
-    bouton4.addEventListener("click", ()=>{
-        let valeur4 = parseInt(bouton4.innerText);
-        valeur4 += 1;
-        if(valeur4 > bouton4.dataset.max){
-              valeur4 = bouton4.dataset.min;
-        }
-        bouton4.textContent = valeur4;
-        numero.textContent = bouton1.innerText + bouton2.innerText + bouton3.innerText + bouton4.innerText;
-    });
-*/
-
 })();

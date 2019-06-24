@@ -21,31 +21,29 @@
 
     const performOperation = operation => {
 
-      var x = document.getElementById("op-one").value;
-      var y = document.getElementById("op-two").value;
+      let x = document.getElementById("op-one").value;
+      let y = document.getElementById("op-two").value;
 
       switch (operation) {
         case "addition" :
-          var somme = parseFloat(x)+parseFloat(y);  // Pour transformer le string en number
+          let somme = parseFloat(x)+parseFloat(y);  // Pour transformer le string en number
           alert("Résultat: \n" + somme);
           break;
         case "soustraction" :
-          var soustraction = parseFloat(x) - parseFloat(y);
+          let soustraction = parseFloat(x) - parseFloat(y);
           alert("Résultat: \n" + soustraction);
           break;
         case "multiplication" :
-          var multiplication = parseFloat(x) * parseFloat(y);
+          let multiplication = parseFloat(x) * parseFloat(y);
           alert("Résultat: \n" + multiplication);
           break;
         case "division" :
-          var division = parseFloat(x) / parseFloat(y);
+          let division = parseFloat(x) / parseFloat(y);
           alert("Résultat: \n" + division);
           break;
         default:
           alert("erreur");
-
       }
-
     };
 
     Array.from(document.querySelectorAll("button.operator")).forEach($btn =>

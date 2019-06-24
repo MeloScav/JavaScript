@@ -9,15 +9,12 @@
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
 
-
-
 (() => {
     function recherche(){
         let anneeD = parseInt(document.getElementById("year").value);
         let tableau = [];
         for(month=1; month<=12; month++){
             let d = new Date(anneeD, month , 13);
-
             if (d.getDay() == 5){
                 tableau.push(d);
             }
@@ -27,7 +24,6 @@
             result += format(tableau[i]) + "\n";
         }
         alert(result);
-
     }
 
     function format(date){
@@ -37,6 +33,4 @@
 
     let bouton = document.getElementById("run");
     bouton.addEventListener("click", recherche);
-
-
 })();

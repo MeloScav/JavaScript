@@ -22,6 +22,6 @@
                                                             // Math.random ==> chiffre aléatoire entre 0 et 1
                                                             // Nombre obtenu va récupérer une partie du letters
       }
-      document.body.style.backgroundColor = couleur;
+      document.querySelector("html").style.backgroundColor = couleur;
     }
 })();

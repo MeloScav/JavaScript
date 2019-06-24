@@ -101,7 +101,19 @@
         console.log(newTab);
 
     });
-
-
-
 })();
+
+/*
+let bouton = document.getElementById("run");
+bouton.addEventListener("click", ()=>{
+
+    let newTab = filter( (element) =>{      // crée un tableau pour nous, va renvoyer tout ce qui est True
+      if(element.age > 18){
+          return true;
+      }
+
+  });
+    console.log(newTab);
+
+});
+*/

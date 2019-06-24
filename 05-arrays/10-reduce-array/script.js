@@ -88,16 +88,12 @@
         },
     ];
 
-
     document.getElementById("run").addEventListener("click", ()=>{
 
         let somme = people.reduce(
             (total, actu) => total + actu.age
         ,0);                                      // 0 => pour mettre l'accumulateur à zéro
         console.log(somme);
-
-
     });
-
 
 })();

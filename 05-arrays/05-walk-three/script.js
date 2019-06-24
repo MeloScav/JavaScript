@@ -38,16 +38,42 @@
         },
     ];
 
-
       let bouton = document.getElementById("run");
       bouton.addEventListener("click", ()=>{
 
             people.forEach(element =>{      // element devient chaque partie du tableau
                 console.log(element.lastname);      // pour recupérer que les lastnames
             });
-
       });
-
-
-
 })();
+
+/*
+let bouton = document.getElementById("run");
+bouton.addEventListener("click", ()=>{
+
+      people.forEach(element =>{
+          console.log(element.firstname, element.lastname);
+      });
+});
+*/
+
+/*
+let bouton = document.getElementById("run");
+bouton.addEventListener("click", ()=>{
+
+      people.forEach( ({firstname, lastname}) =>{
+          console.log(firstname, lastname);
+      });
+});
+*/
+
+/*
+let bouton = document.getElementById("run");
+bouton.addEventListener("click", ()=>{
+
+      people.forEach( (p) =>{
+          const {firstname, lastname} = p;
+          console.log(firstname, lastname);
+      });
+});
+*/

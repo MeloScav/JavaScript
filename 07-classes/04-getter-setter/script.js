@@ -25,7 +25,6 @@
       }
   }
 
-
   document.getElementById("run").addEventListener("click", ()=>{
         let personL = new Person("Lulu", "LeFou");      // On crée une nouvelle personne
         console.log(personL.name);

@@ -40,11 +40,11 @@
 
         );
         console.log(tableauSansDoublon);
-
-
-
-
     });
 
-
 })();
+
+/*
+    const unique = Array.from(new Set(fruits);    // set sorte de array qui ne peut pas avoir plusieurs valeur
+    console.log(unique);                          // array.from transforme en tableau
+*/

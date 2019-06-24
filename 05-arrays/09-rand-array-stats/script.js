@@ -10,21 +10,24 @@
 // You will have time to focus on it later.
 
 (() => {
-
     document.getElementById("run").addEventListener("click", ()=>{
         let nbrs = 0;
         let somme = 0;
         let tableau = [];
         // Boucle pour récupérer les ID + ajouter le nombre aléatoire
-          for(i=1; i<11 ; i++){
-              nbrs = document.getElementById("n-" + i).textContent = Math.floor((Math.random()*100)+1);  // floor: arrondi, random*100: [0,100[, +1 pour aller de 1 à 100
+          for(let i=1; i<11 ; i++){
+              nbrs = document.getElementById("n-" + i).textContent;
+              nbrs = Math.floor((Math.random()*100)+1);  // floor: arrondi, random*100: [0,100[, +1 pour aller de 1 à 100
               tableau.push(nbrs);
               somme += nbrs;
           }
-          let nbrsMin = document.getElementById("min").textContent = Math.min(...tableau);  // Pour dire de prendre chaque élément du tableau
-          let nbrsMax = document.getElementById("max").textContent = Math.max(...tableau);
+          let nbrsMin = document.getElementById("min").textContent;
+          nbrsMin = Math.min(...tableau);  // Pour dire de prendre chaque élément du tableau
+
+          let nbrsMax = document.getElementById("max").textContent;
+          nbrsMax = Math.max(...tableau);
+          
           document.getElementById("sum").textContent = somme;
           document.getElementById("average").textContent = somme/(tableau.length);
     });
-
 })();

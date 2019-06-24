@@ -14,6 +14,9 @@
       let mdp = document.getElementById("pass-one");      // On récupère les inputs
       let mdpC = document.getElementById("pass-two");
 
+    /*  mdp.type = "password";
+      mdp.type = "password";*/
+
       if(mdp.value != mdpC.value){                  // Si différent, bordure rouge
           mdp.style.border= "2px solid red";
           mdpC.style.border = "2px solid red";

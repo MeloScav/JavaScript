@@ -25,7 +25,6 @@
         "cerise",
     ];
 
-
     document.getElementById("run").addEventListener("click", ()=>{
 
       if(fruits.indexOf("pomme") > -1){
@@ -35,8 +34,5 @@
         console.log("Non! Pas de pomme :(")
       }
 
-
     });
-
-
 })();

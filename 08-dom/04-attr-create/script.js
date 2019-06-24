@@ -11,7 +11,7 @@
 
 (() => {
     let source = document.getElementById("source").getAttribute("data-image");      // On récupère l'attribut data-image
-    let image = document.getElementById("target").innerHTML = "<img src='" + source + "' alt='chat'/>";  // On ajoute la balise et l'image
+    let image = document.getElementById("target").innerHTML = `<img src="${source}" alt="chat"/>`;  // On ajoute la balise et l'image
 
     let suppr = document.getElementById("source");      // On récupère l'élément à supprimer
     let parent = document.querySelector(".material");   // On sélectionne le parent de l'élément

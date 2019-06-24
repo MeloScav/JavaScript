@@ -10,14 +10,6 @@
 // You will have time to focus on it later.
 
 (() => {
-    function fruitQ(){
-        let tomate = fruits[3];
-        alert(tomate);
-    }
-
-    let bouton = document.getElementById("run");
-    bouton.addEventListener("click", fruitQ);
-
     const fruits = [
         "pomme",
         "poire",
@@ -33,5 +25,11 @@
         "cerise",
     ];
 
-    // your code here
+    function fruitQ(){
+        let tomate = fruits[3];
+        alert(tomate);
+    }
+
+    let bouton = document.getElementById("run");
+    bouton.addEventListener("click", fruitQ); 
 })();

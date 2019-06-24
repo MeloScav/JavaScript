@@ -88,7 +88,6 @@
         },
     ];
 
-
       let bouton = document.getElementById("run");
       bouton.addEventListener("click", ()=>{
       let i = 1;    // Créer une variable i pour récupérer la place de l'élément
@@ -102,6 +101,13 @@
       });
 
     });
-
-
 })();
+
+/*
+people.forEach((element, index) =>{      // element devient chaque partie du tableau
+    if(element.firstname == "Jean" && element.lastname == "Dupont"){
+          console.log(element.email + "  Position n°" + index);      // pour recupérer que les lastnames
+                                                    // On affiche i et donc la position
+    }
+});
+*/

@@ -45,3 +45,12 @@
     });
 
 })();
+
+/*
+    const cleanedComputers = computers.map((cmp)=> Objet.assign({}, defaultProps, cmp));      // object assign reprend chaque propriété et assigne les propriétés de droite à gauche, si present dans celle de gauche sera ecrasée par celle de droite
+    console.log(cleanedComputers);
+*/
+
+/*
+    const cleanedComputers = computers.map( (cmp)=> ({...defaultProps, ...cmp}));     // prends individuellement chaque propriété 
+*/

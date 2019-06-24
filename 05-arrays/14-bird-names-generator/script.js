@@ -42,13 +42,16 @@
         let birdsAleat = birds[Math.floor(Math.random()*birds.length)];
         let adjAleat = [...adjectives][Math.floor(Math.random()*adjectives.size)];
         if(birdsAleat.fem == true){
-            document.getElementById("target").textContent = "La " + birdsAleat.name + " " + adjAleat +"e";
+            document.getElementById("target").textContent = `La ${birdsAleat.name} ${adjAleat}e`;
         }
         else{
             document.getElementById("target").textContent = "Le " + birdsAleat.name + " " + adjAleat;
         }
     });
 
-
-
 })();
+
+/*
+  // vrai aleatoire
+ let realrand = (max, min) => {return Math.floor (Math.random()* (max=min) - min)};
+*/

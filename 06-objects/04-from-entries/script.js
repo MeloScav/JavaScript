@@ -14,10 +14,10 @@
     const values = ["Skitty", "cat", 9, "female", "tabby"];
     document.getElementById("run").addEventListener("click", ()=>{
         let newPaires = new Map();             // Map pour associer les keys/values
-        for(i=0 ; i<keys.length; i++){
+        for( let i=0 ; i<keys.length; i++){
           newPaires.set(keys[i], values[i]);         // Ajoute une paire clé/valeur
         }
-        let newObj = Object.fromEntries(newPaires);     // On crée l'objet
+        let newObj = Object.fromEntries(newPaires);     // On crée l'objet, tableau de tableau
         console.log(newObj);
     });
 })();

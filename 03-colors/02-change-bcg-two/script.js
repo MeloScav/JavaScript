@@ -15,8 +15,6 @@
 
     function changeBgColor(){                                      // Fonction pour changer de couleur
       var bgColor = document.getElementById("color").value;     // Dans la fonction pour prendre la couleur
-      document.body.style.backgroundColor = bgColor;            // On récupère la couleur dans le input
+      document.querySelector("html").style.backgroundColor = bgColor;            // On récupère la couleur dans le input
     }
-
-
 })();

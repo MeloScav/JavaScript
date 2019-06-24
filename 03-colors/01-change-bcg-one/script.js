@@ -15,15 +15,15 @@
     bgRed.addEventListener ("click", backgroundRed);    // On fait attache l'évènement au click et à la fonction
 
     function backgroundRed(){                           // Fonction qui change la couleur
-      document.body.style.backgroundColor = "red";
-    }
+      document.querySelector("html").style.backgroundColor = "red";
+    }       // querySelector avec html pour garder le logo
 
     // Changement Vert
     var bgGreen = document.getElementById("green");
     bgGreen.addEventListener ("click", backgroundGreen);
 
     function backgroundGreen(){
-      document.body.style.backgroundColor = "green";
+      document.querySelector("html").style.backgroundColor = "green";
     }
 
     // Changement Jaune
@@ -31,7 +31,7 @@
     bgYellow.addEventListener ("click", backgroundYellow);
 
     function backgroundYellow(){
-      document.body.style.backgroundColor = "yellow";
+      document.querySelector("html").style.backgroundColor = "yellow";
     }
 
     // Changement Bleu
@@ -39,9 +39,6 @@
     bgBlue.addEventListener ("click", backgroundBlue);
 
     function backgroundBlue(){
-      document.body.style.backgroundColor = "blue";
+      document.querySelector("html").style.backgroundColor = "blue";
     }
-
-
-
 })();

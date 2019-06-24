@@ -40,7 +40,12 @@
         // perform an division
         var x = document.getElementById("op-one").value;
         var y = document.getElementById("op-two").value;
-        var division = parseFloat(x) / parseFloat(y);
-        alert("Résultat: \n" + division);
+        if(y!= 0){
+          var division = parseFloat(x) / parseFloat(y);
+          alert("Résultat: \n" + division);
+        }
+        else{
+          alert("impossible de diviser par 0 !")
+        }
     });
 })();

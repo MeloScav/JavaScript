@@ -25,5 +25,22 @@
     else{
         document.getElementById("target").innerHTML = "Bonsoir";
     }
-
 })();
+
+/*
+Version 2
+(() => {
+    // to change the content of a tag: document.getElementById("element-id").innerHTML = "new-value"
+    let date = new Date();
+    let hours = date.getHours();
+    let minutes = date.getMinutes();
+    let total = hours*100 + minutes;
+
+    if(total <= 1730){
+        document.getElementById("target").innerHTML = "Bonjour";
+    }
+    else{
+        document.getElementById("target").innerHTML = "Bonsoir";
+  }
+})();
+*/

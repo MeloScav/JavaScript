@@ -30,8 +30,5 @@
         fruits.add("kiwi");
         console.log(fruits);
 
-
     });
-
-
 })();

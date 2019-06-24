@@ -10,6 +10,8 @@
 // You will have time to focus on it later.
 
 (() => {
+     // Récupération du numéro
+      let numero = document.getElementById("target");
     // Récupération des boutons
       let bouton1 = document.getElementById("fix-part-one");
       let bouton2 = document.getElementById("fix-part-two");
@@ -27,9 +29,15 @@
           if(valeur > input.dataset.max){
               valeur = input.datasetmin;
            }
-          input.textContent = valeur;          
+           else if (valeur < 10) {
+               valeur = "0" + valeur;
+           }
+           input.textContent = valeur;
+           numero.textContent = "+" + input1.innerText + input2.innerText + input3.innerText + input4.innerText;
       };
-
+      bouton1.addEventListener("click", ()=>{
+          defilement(input1);
+      });
 
 
 })();

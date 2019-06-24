@@ -22,11 +22,10 @@
         "Lucas",
     ]);
 
-
     document.getElementById("run").addEventListener("click", ()=>{
        let nbr = people.size;                           // Taille
        let recherche = people.has("Alexandre");         // Recherche si Alexandre est présent, renvoie un booléen
-       console.log("Nombre de personne : " + nbr);
+       console.log(`Nombre de personne : ${nbr}`);
        if (recherche == true){
           console.log("Alexandre fait parti du Set");
        }
