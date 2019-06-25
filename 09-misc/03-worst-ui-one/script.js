@@ -17,3 +17,11 @@
     });
 
 })();
+// autre methode
+/*
+    const target = document.getElementById("target");
+
+    document.getElementById("slider").addEventListener("input", evt =>{
+        target.innerText = `+${evt.currentTarget.value}`;
+  });
+*/

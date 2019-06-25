@@ -42,3 +42,23 @@
     });
 
 })();
+
+/*
+    const target = document.getElementById("target");
+    const buttons = Array.from(document.querySelectorAll("button"));
+
+    document.querySelector("button").forEach((button)=>{
+        button.addEventListener("click", ()=>{
+            const value = parseFloat(button.innerText);      // mettre juste un + égale un parseInt
+                                                              // mettre un deuxième parametre pour calculer en base 10
+            value ++;
+
+            if(value > parseFloat(button.getAttribute("data-max")){
+                  value = button.getAttribute("data-min");
+          }
+          button.innerText = `${value}`.padStart(2, "0");    // Si plus petit que 2, tu rajoutes un 0
+
+          target.innerText = `+{ buttons.map( btn => btn.innerText).join("")} `;
+      });
+  })
+*/

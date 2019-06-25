@@ -10,7 +10,17 @@
 // You will have time to focus on it later.
 
 (() => {
-    let texte = document.getElementById("target").innerText;    // On récupère le texte
-    console.log(texte);
+    const fontSizes = [2.2, 2.4, 2.8, 3.2, 3.6, 3.2, 2.8, 2.4, 2.2];
+
+    const target = document.querySelector("#target");
+
+    const text = target.innerText;
+
+    const letters = text.split("");
+
+    target.innerHTML = letters.map((letter, i ) =>{
+        return `<span style="font-size: ${
+          fontSizes[i % fontSizes.length]}rem">${letter}</span>`;
+    }).join("");
 
 })();
