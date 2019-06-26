@@ -10,5 +10,14 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+      document.getElementById("run").addEventListener("click", ()=>{
+            window.lib.getPersons((erreur, tableau)=>{
+                if(erreur === null){
+                    console.log(tableau);
+                }
+                else{
+                    console.error("Erreur :(");
+                }
+            });
+      });
 })();

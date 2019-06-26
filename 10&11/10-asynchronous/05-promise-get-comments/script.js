@@ -10,5 +10,17 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+    document.getElementById("run").addEventListener("click", ()=>{
+      const promesse = window.lib.getPosts();
+      promesse.then( (articles)=>{
+          articles.forEach( element =>{
+                let promesseCom = window.lib.getComments(element.id);
+                promesseCom.then((tableau)=>{
+                        element.comments = tableau;
+                });
+          });
+          console.log(articles);
+    });
+  });
+
 })();

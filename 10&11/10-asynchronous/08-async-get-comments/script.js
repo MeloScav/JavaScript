@@ -10,5 +10,16 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+      document.getElementById("run").addEventListener("click", ()=>{
+            const promArticle = async()=>{
+                const article = await window.lib.getPosts();
+
+            };
+            promArticle();
+
+            const promComments = async ()=>{
+                const com = await window.lib.getComments();
+            };
+            promComments();
+      });
 })();

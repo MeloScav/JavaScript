@@ -10,5 +10,10 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+    document.getElementById("run").addEventListener("click", ()=>{
+         const promesse = window.lib.getPosts();      // On stock la promesse dans une variable
+         promesse.then( (tableau)=>{                  // retourne la promesse
+                console.log(tableau);                 // On affiche le tableau
+         });
+      });
 })();

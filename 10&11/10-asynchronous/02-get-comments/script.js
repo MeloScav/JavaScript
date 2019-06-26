@@ -10,5 +10,14 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+  document.getElementById("run").addEventListener("click", ()=>{
+      window.lib.getPosts((erreur, articles)=>{         // On récupère nos articles dans le fichier
+          articles.forEach( element =>{                     // On boucle dessus
+              window.lib.getComments(element.id, (erreur, tableau)=>{     // On récupère nos commentaire correspondant aux articles avec element.id
+                    element.comments = tableau;                           // On ajoute les commentaires
+              })
+          });
+          console.log(articles);    // On affiche
+      });
+  });
 })();
