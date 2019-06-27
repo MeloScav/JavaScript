@@ -10,5 +10,15 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+    document.getElementById("run").addEventListener("click", ()=>{
+      fetch("http://localhost:3000/heroes").then((response)=>{      // On récupère le chemin et on fait un premier then pour la promise
+         response.json().then( (json)=>{          // On fait un .json() sur le response puis on refait un then dessus
+            json.forEach(element =>{              // le json renvoie un tableau, donc on boucle dessus pour récupérer les éléments qu'on veut
+                console.log(element.name);
+            })
+         });
+      });
+});
+
+
 })();

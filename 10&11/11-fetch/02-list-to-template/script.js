@@ -10,5 +10,25 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+  document.getElementById("run").addEventListener("click", ()=>{
+    let template = document.getElementById("tpl-hero");           // On récupère le template
+    let target = document.getElementById("target");               // On récupère le target
+
+    fetch("http://localhost:3000/heroes").then((response)=>{      // On récupère le chemin
+       response.json().then( (json)=>{          // On récupère le tableau des héros
+
+          json.forEach((element) =>{                                    // On boucle dessus
+              let cloneTemplate = template.content.cloneNode(true);       // On clone le template
+
+              cloneTemplate.querySelector(".name").innerText = element.name;      // On récupère les noms
+              cloneTemplate.querySelector(".alter-ego").innerText = element.alterEgo;     // On récupère les alter-egos
+              cloneTemplate.querySelector(".powers").innerText = element.abilities;     // On récupère les pouvoirs
+
+              target.appendChild(cloneTemplate);      // On met les informations dans le target l'un en dessous de l'autre
+
+          })
+
+       });
+    });
+});
 })();

@@ -10,5 +10,37 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+    document.getElementById("run").addEventListener("click", ()=>{
+      // On récupère les inputs
+      let inputName = document.getElementById("hero-name").value;
+      let inputAlterEgo = document.getElementById("hero-alter-ego").value;
+      let inputPower = document.getElementById("hero-powers").value;
+
+      // On défini
+      let myInit = { method : "POST",     // Façon d'envoyer
+                     headers : {
+                       "Accept" : "application/json",            // quelles types de données on accepte
+                       "Content-type" : "application/json"      // quelle types de données on envoit (json ici)
+                     },
+                     body : JSON.stringify({             // Transforme l'objet en chaîne de caractère JSON
+                                  name : inputName,
+                                  alterEgo : inputAlterEgo,
+                                  abilities : inputPower.split(","),      // Sous forme de tableau
+                     })
+
+                    }
+
+     fetch("http://localhost:3000/heroes", myInit)         // On fait une requête et on ajoute notre variable
+     setTimeout(()=>{                                            // On met un timer
+       fetch("http://localhost:3000/heroes").then((response)=>{       // On fait notre fetch + boucle pour afficher
+           response.json().then( (json)=>{
+                  json.forEach(element=>{
+                    console.log(element);
+                  })
+           });
+        });
+     }, 1000)
+
+
+    });
 })();
