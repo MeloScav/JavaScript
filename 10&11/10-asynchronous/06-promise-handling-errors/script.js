@@ -11,7 +11,7 @@
 
 (() => {
     document.getElementById("run").addEventListener("click", ()=>{
-        let promesse = window.lib.getPersons();   // On crée un variable contenant la Promise
+        let promesse = window.lib.getPersons();   // On crée une variable contenant la Promise
         promesse.then((tableau)=>{                // On lui dit que si c'est ok
                 console.log(tableau);             // Tu affiche le tableau
         }).catch((erreur)=>{                      // Si erreur

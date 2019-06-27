@@ -10,5 +10,16 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+    document.getElementById("run").addEventListener("click", ()=>{
+        const getPromTableau = async ()=>{
+            try{                                                  // Quand ok
+              const tableau = await window.lib.getPersons();
+              console.log(tableau);
+            }
+            catch(erreur){                            // Quand pas ok
+               console.error("Erreur :(");
+            }
+        };
+        getPromTableau();
+    });
 })();
